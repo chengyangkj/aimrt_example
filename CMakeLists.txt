@@ -1,0 +1,11 @@
+project(aimrt_example)
+
+add_subdirectory(helloworld)
+add_subdirectory(executor_co)
+add_subdirectory(executor_normal)
+add_subdirectory(normal_channel)
+add_subdirectory(ros2_channel)
+add_subdirectory(my_normal_channel)
+add_subdirectory(my_ros2_channel)
+add_subdirectory(my_normal_rpc)
+add_subdirectory(my_ros2_rpc)

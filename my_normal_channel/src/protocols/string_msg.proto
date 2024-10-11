@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+//包名 用于指定生成代码时的命名空间
+package my_channel.proto;
+
+// 自定义消息类型，生成代码后的对象为：my_channel::proto::StringMsg
+message StringMsg {
+  string msg = 1;
+}

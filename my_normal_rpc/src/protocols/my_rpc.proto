@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+// 包名 用于指定生成代码时的命名空间
+package my_rpc.proto;
+import "common.proto";
+
+message GetFooDataReq { string msg = 1; }
+
+message GetFooDataRsp {
+  uint64 code = 1;
+  string msg = 2;
+  ExampleFoo data = 3;
+}
+
+// 定义RPC服务
+service MyService {
+  rpc GetFooData(GetFooDataReq) returns (GetFooDataRsp);
+}

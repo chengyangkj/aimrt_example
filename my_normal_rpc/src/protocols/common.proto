@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package my_rpc.proto;
+
+message ExampleFoo {
+  int32 code = 1;
+  string data = 2;
+}
+
+message ExampleBar { int32 num = 1; }
