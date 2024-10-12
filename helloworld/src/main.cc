@@ -38,7 +38,8 @@ public:
   // 需要实现该方法，开启模块
   bool Start() {
     AIMRT_INFO("Start succeeded.");
-
+    //使用AimRT打印HelloWorld
+    AIMRT_INFO("Hello, World!");
     return true;
   }
 

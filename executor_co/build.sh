@@ -14,7 +14,9 @@ cmake -B build \
     -Djsoncpp_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/jsoncpp-1.9.5.tar.gz \
     -Dlibunifex_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/libunifex-591ec09e7d51858ad05be979d4034574215f5971.tar.gz \
     -Dtbb_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/oneTBB-2021.13.0.tar.gz \
-    -Dsqlite_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/sqlite-amalgamation-3420000.zip
+    -Dsqlite_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/sqlite-amalgamation-3420000.zip \
+    -Diceoryx_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/iceoryx-2.0.6.tar.gz \
+    -Dnghttp2_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/nghttp2-1.62.1.zip \
 $@
 
 if [ $? -ne 0 ]; then
