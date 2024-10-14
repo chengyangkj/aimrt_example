@@ -29,6 +29,10 @@ public:
     thread_safe_executor_ =
         core_.GetExecutorManager().GetExecutor("thread_safe_executor");
 
+    // 检查执行器是否为线程安全的
+    AIMRT_CHECK_ERROR_THROW(thread_safe_executor_.ThreadSafe(),
+                            "the executor must be thread safe!");
+
     AIMRT_INFO("Init succeeded.");
 
     return true;
