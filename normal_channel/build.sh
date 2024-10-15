@@ -3,22 +3,29 @@
 cd $(dirname $0)
 
 cmake -B build \
-    -Dboost_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/boost-1.82.0.tar.xz \
-    -Dpybind11_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/pybind11-2.13.1.tar.gz \
-    -Dpaho_mqtt_c_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/paho.mqtt.c-1.3.13.tar.gz \
-    -Dfmt_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/fmt-10.2.1.tar.gz \
-    -Dgflags_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/gflags-2.2.2.tar.gz \
-    -Dgoogletest_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/googletest-1.13.0.tar.gz \
-    -Dprotobuf_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/protobuf-3.21.12.tar.gz \
-    -Dyaml-cpp_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/yaml-cpp-0.8.0.tar.gz \
-    -Djsoncpp_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/jsoncpp-1.9.5.tar.gz \
-    -Dlibunifex_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/libunifex-591ec09e7d51858ad05be979d4034574215f5971.tar.gz \
-    -Dtbb_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/oneTBB-2021.13.0.tar.gz \
-    -Dsqlite_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/sqlite-amalgamation-3420000.zip \
-    -Diceoryx_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/iceoryx-2.0.6.tar.gz \
-    -Dnghttp2_DOWNLOAD_URL=https://gitee.com/chengyangkj/aimrt_thirdparty/releases/download/v0.8.2/nghttp2-1.62.1.zip \
+    -Dboost_DOWNLOAD_URL=https://gitee.com/AimRT/boost/releases/download/1.82.0/boost-1.82.0.tar.xz \
+    -Dasio_DOWNLOAD_URL=https://gitee.com/AimRT/asio/repository/archive/asio-1-30-2.zip \
+    -Dfmt_DOWNLOAD_URL=https://gitee.com/AimRT/fmt/repository/archive/10.2.1.zip \
+    -Dgflags_DOWNLOAD_URL=https://gitee.com/mirrors/gflags/repository/archive/v2.2.2.zip \
+    -Dgoogletest_DOWNLOAD_URL=https://gitee.com/mirrors/googletest/repository/archive/v1.13.0.zip \
+    -Dprotobuf_DOWNLOAD_URL=https://gitee.com/mirrors/protobufsource/repository/archive/v3.21.12.zip \
+    -Dyaml-cpp_DOWNLOAD_URL=https://gitee.com/mirrors/yaml-cpp/repository/archive/0.8.0.zip \
+    -Djsoncpp_DOWNLOAD_URL=https://gitee.com/AimRT/jsoncpp/repository/archive/1.9.6.zip \
+    -Dsqlite_DOWNLOAD_URL=https://gitee.com/AimRT/sqlite/releases/download/amalgamation-3420000/sqlite-amalgamation-3420000.zip \
+    -Dstdexec_DOWNLOAD_URL=https://gitee.com/AimRT/stdexec/repository/archive/nvhpc-23.09.rc4.zip \
+    -Dlibunifex_DOWNLOAD_URL=https://gitee.com/AimRT/libunifex/repository/archive/591ec09e7d51858ad05be979d4034574215f5971.zip \
+    -Dtbb_DOWNLOAD_URL=https://gitee.com/mirrors/tbb/repository/archive/v2021.13.0.zip \
+    -Dpybind11_DOWNLOAD_URL=https://gitee.com/mirrors/pybind11/repository/archive/v2.13.1.zip \
+    -Dpaho_mqtt_c_DOWNLOAD_URL=https://gitee.com/mirrors/paho.mqtt.c/repository/archive/v1.3.13.zip \
+    -Dnlohmann_json_DOWNLOAD_URL=https://gitee.com/AimRT/json/repository/archive/v3.11.3.zip \
+    -Dopentelemetry_proto_DOWNLOAD_URL=https://gitee.com/AimRT/opentelemetry-proto/repository/archive/v1.3.2.zip \
+    -Dopentelemetry_cpp_DOWNLOAD_URL=https://gitee.com/AimRT/opentelemetry-cpp/repository/archive/v1.16.1.zip \
+    -Dzenohc_DOWNLOAD_URL=https://gitee.com/AimRT/zenoh-c/repository/archive/1.0.0.6.zip \
+    -Dnghttp2_DOWNLOAD_URL=https://gitee.com/mirrors/nghttp2/repository/archive/v1.62.1.zip \
+    -Diceoryx_DOWNLOAD_URL=https://gitee.com/mirrors/iceoryx/repository/archive/v2.0.6.zip \
+    -Dcpptoml_DOWNLOAD_URL=https://gitee.com/AimRT/cpptoml/repository/archive/v0.1.0.zip \
     -DAIMRT_BUILD_EXAMPLES=ON \
-    -DAIMRT_BUILD_WITH_PROTOBUF=ON
+    -DAIMRT_BUILD_WITH_PROTOBUF=ON \
 $@
 
 if [ $? -ne 0 ]; then
