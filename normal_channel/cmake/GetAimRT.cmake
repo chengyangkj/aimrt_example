@@ -2,7 +2,7 @@ include(FetchContent)
 
 message(STATUS "get aimrt ...")
 
-set(aimrt_REPOSITORY_URL "https://github.com/AimRT/AimRT")
+set(aimrt_REPOSITORY_URL "https://github.com/AimRT/AimRT" CACHE STRING "")
 
 FetchContent_Declare(aimrt GIT_REPOSITORY ${aimrt_REPOSITORY_URL} GIT_TAG v0.8.2)
 
