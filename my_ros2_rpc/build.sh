@@ -3,6 +3,7 @@
 cd $(dirname $0)
 
 cmake -B build \
+    -Daimrt_REPOSITORY_URL=https://gitee.com/robot-os/AimRT \
     -Dboost_DOWNLOAD_URL=https://gitee.com/AimRT/boost/releases/download/1.82.0/boost-1.82.0.tar.xz \
     -Dasio_DOWNLOAD_URL=https://gitee.com/AimRT/asio/repository/archive/asio-1-30-2.zip \
     -Dfmt_DOWNLOAD_URL=https://gitee.com/AimRT/fmt/repository/archive/10.2.1.zip \

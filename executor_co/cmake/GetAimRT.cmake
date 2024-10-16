@@ -2,7 +2,9 @@ include(FetchContent)
 
 message(STATUS "get aimrt ...")
 
-FetchContent_Declare(aimrt GIT_REPOSITORY https://gitee.com/robot-os/AimRT GIT_TAG v0.8.2)
+set(aimrt_REPOSITORY_URL "https://github.com/AimRT/AimRT")
+
+FetchContent_Declare(aimrt GIT_REPOSITORY ${aimrt_REPOSITORY_URL} GIT_TAG v0.8.2)
 
 FetchContent_GetProperties(aimrt)
 
