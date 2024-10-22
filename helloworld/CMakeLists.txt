@@ -23,7 +23,11 @@ target_include_directories(
   PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # 链接库
-target_link_libraries(${PROJECT_NAME} aimrt::runtime::core aimrt::interface::aimrt_module_cpp_interface yaml-cpp::yaml-cpp)
+target_link_libraries(${PROJECT_NAME} PUBLIC
+                      aimrt::runtime::core
+                      aimrt::interface::aimrt_module_cpp_interface
+                      yaml-cpp::yaml-cpp
+                    )
 
 # 安装配置文件至bin目录
 add_custom_target(

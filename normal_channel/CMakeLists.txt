@@ -24,7 +24,11 @@ target_include_directories(
 
 # 链接库
 target_link_libraries(
-  ${PROJECT_NAME} aimrt::runtime::core aimrt::interface::aimrt_module_cpp_interface yaml-cpp::yaml-cpp aimrt::interface::aimrt_module_protobuf_interface # protobuf接口消息所需包含的接口
+  ${PROJECT_NAME} PUBLIC
+  aimrt::runtime::core 
+  aimrt::interface::aimrt_module_cpp_interface 
+  yaml-cpp::yaml-cpp 
+  aimrt::interface::aimrt_module_protobuf_interface # protobuf接口消息所需包含的接口
   aimrt::protocols::example_pb_gencode # protobuf生成的消息的target
 )
 

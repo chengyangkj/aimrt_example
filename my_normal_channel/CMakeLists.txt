@@ -29,8 +29,13 @@ find_package(std_msgs REQUIRED)
 
 # 链接库
 target_link_libraries(
-  ${PROJECT_NAME} aimrt::runtime::core aimrt::interface::aimrt_module_cpp_interface yaml-cpp::yaml-cpp aimrt::interface::aimrt_module_protobuf_interface # 发布protobuf消息所需包含的接口
-  my_channel_pb_gencode)
+  ${PROJECT_NAME} PUBLIC
+  aimrt::runtime::core 
+  aimrt::interface::aimrt_module_cpp_interface 
+  yaml-cpp::yaml-cpp 
+  aimrt::interface::aimrt_module_protobuf_interface # 发布protobuf消息所需包含的接口
+  my_channel_pb_gencode
+  )
 
 # 安装配置文件
 add_custom_target(

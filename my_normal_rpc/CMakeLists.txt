@@ -27,7 +27,11 @@ target_include_directories(
 
 # 链接库
 target_link_libraries(
-  ${PROJECT_NAME} aimrt::runtime::core aimrt::interface::aimrt_module_cpp_interface yaml-cpp::yaml-cpp aimrt::interface::aimrt_module_protobuf_interface
+  ${PROJECT_NAME} PUBLIC
+  aimrt::runtime::core 
+  aimrt::interface::aimrt_module_cpp_interface 
+  yaml-cpp::yaml-cpp 
+  aimrt::interface::aimrt_module_protobuf_interface
   my_rpc_aimrt_rpc_gencode #链接生成的rpc代码库
 )
 

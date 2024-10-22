@@ -26,7 +26,7 @@ find_package(std_msgs REQUIRED)
 
 # 链接库
 target_link_libraries(
-  ${PROJECT_NAME}
+  ${PROJECT_NAME} PUBLIC
   aimrt::runtime::core
   aimrt::interface::aimrt_module_cpp_interface
   yaml-cpp::yaml-cpp
