@@ -7,6 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 
+# 设置可执行程序的输出路径为bin目录
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+# 设置所有动态库的输出路径为项目的 lib 目录
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
 # 添加三方库
 include(cmake/GetAimRT.cmake)
 
@@ -16,8 +21,7 @@ add_subdirectory(src/protocols/my_ros2_msg)
 # 包含源文件
 file(GLOB_RECURSE SOURCE_FILE ${PROJECT_SOURCE_DIR}/src/*.cc)
 
-# 设置可执行程序的输出路径为bin目录
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 
 # 添加可执行文件
 add_executable(${PROJECT_NAME} ${SOURCE_FILE})

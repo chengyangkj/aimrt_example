@@ -25,6 +25,7 @@ cmake -B build \
     -Dnghttp2_DOWNLOAD_URL=https://gitee.com/mirrors/nghttp2/repository/archive/v1.62.1.zip \
     -Diceoryx_DOWNLOAD_URL=https://gitee.com/mirrors/iceoryx/repository/archive/v2.0.6.zip \
     -Dcpptoml_DOWNLOAD_URL=https://gitee.com/AimRT/cpptoml/repository/archive/v0.1.0.zip \
+    -DCMAKE_INSTALL_PREFIX=./build/install \
     -DAIMRT_BUILD_ROS2_PLUGIN=ON \
     -DAIMRT_BUILD_WITH_ROS2=ON \
     $@
@@ -37,3 +38,4 @@ fi
 # make
 cd build || exit 1
 make -j$(nproc)
+make install
